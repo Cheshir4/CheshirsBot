@@ -218,21 +218,6 @@ public class PocketSphinxActivity extends Activity implements
             return;
 
         String text = hypothesis.getHypstr();
-        addPhrase(color1, color2, text, true);
-
-
-
-
-        String answer = getAnswer(text);
-        if (answer.equals(""))
-            answer = "Извини, я тебя не понимаю. Попробуй еще раз!";
-
-
-
-
-
-
-        addPhrase(color2, color3, answer, false);
 
         if (text.equals(KEYPHRASE))
             switchSearch(RU_SEARCH);
@@ -253,7 +238,16 @@ public class PocketSphinxActivity extends Activity implements
     public void onResult(Hypothesis hypothesis) {
         ((EditText) findViewById(R.id.editText1)).setText("");
         if (hypothesis != null) {
+
             String text = hypothesis.getHypstr();
+            addPhrase(color1, color2, text, true);
+
+            String answer = getAnswer(text);
+            if (answer.equals(""))
+                answer = "Извини, я тебя не понимаю. Попробуй еще раз!";
+
+            addPhrase(color2, color3, answer, false);
+
             makeText(getApplicationContext(), text, Toast.LENGTH_SHORT).show();
         }
     }

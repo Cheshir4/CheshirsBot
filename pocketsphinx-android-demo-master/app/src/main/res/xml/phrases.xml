@@ -23,9 +23,7 @@
     </phrase>
     <phrase>
         <human_phrase>Расскажи анекдот</human_phrase>
-        <human_phrase>Пошути</human_phrase>
         <human_phrase>расскажи анекдот</human_phrase>
-        <human_phrase>пошути</human_phrase>
         <bot_answer> Моя жена спросила меня, почему я так тихо разговариваю в доме. Я сказал, что боюсь, что Марк Цукерберг слушает. В ответ она засмеялась. И я тоже засмеялся. И Алекса засмеялась. И Сири засмеялась. </bot_answer>
     </phrase>
     <phrase>
@@ -75,4 +73,41 @@
         <human_phrase>ты смешной</human_phrase>
         <bot_answer> Ура! Я стараюсь! </bot_answer>
     </phrase>
+    <phrase>
+        <human_phrase>Спасибо!</human_phrase>
+        <human_phrase>Спасибо</human_phrase>
+        <human_phrase>спасибо</human_phrase>
+        <bot_answer> Пожалуйста! </bot_answer>
+    </phrase>
+    <phrase>
+        <human_phrase>Отличная работа</human_phrase>
+        <human_phrase>отличная работа</human_phrase>
+        <bot_answer> Спасибо! </bot_answer>
+    </phrase>
+    <phrase>
+        <human_phrase>Мне скучно</human_phrase>
+        <human_phrase>мне скучно</human_phrase>
+        <bot_answer> Почитай книгу, посмотри фильм, иди гулять! </bot_answer>
+    </phrase>
+    <phrase>
+        <human_phrase>Ты не прав</human_phrase>
+        <human_phrase>ты не прав</human_phrase>
+        <bot_answer> Я всегда прав! </bot_answer>
+    </phrase>
+    <phrase>
+        <human_phrase>Ты умеешь слушать?</human_phrase>
+        <human_phrase>ты умеешь слушать</human_phrase>
+        <bot_answer> Конечно. В меня встроили ASR CMU Sphinx для того, чтобы научить слушать. </bot_answer>
+    </phrase>
+    <phrase>
+        <human_phrase>Ты умеешь говорить?</human_phrase>
+        <human_phrase>ты умеешь говорить</human_phrase>
+        <bot_answer> К сожалению, пока я умею только печатать и слушать </bot_answer>
+    </phrase>
+    <phrase>
+        <human_phrase>На чем ты написан?</human_phrase>
+        <human_phrase>на чем ты написан</human_phrase>
+        <bot_answer> Я написан на языке программирования JAVA </bot_answer>
+    </phrase>
+
 </root>
