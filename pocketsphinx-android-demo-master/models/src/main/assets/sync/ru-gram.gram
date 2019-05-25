@@ -1,0 +1,8 @@
+#JSGF V1.0;
+
+
+grammar ru-gram;
+
+
+<ru> = привет | пока ;
+public <ru-gram> = <ru>+;
