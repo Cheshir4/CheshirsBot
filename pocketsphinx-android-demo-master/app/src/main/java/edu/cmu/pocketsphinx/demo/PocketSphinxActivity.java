@@ -39,6 +39,8 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
+import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -87,6 +89,10 @@ public class PocketSphinxActivity extends Activity implements
     private final int USERID = 6000;
     private int countID;
 
+    String color1 = "#FF033E";
+    String color2 = "#FFFFFF";
+    String color3 = "#000000";
+
     @Override
     public void onCreate(Bundle state) {
         super.onCreate(state);
@@ -103,25 +109,17 @@ public class PocketSphinxActivity extends Activity implements
         ((TextView) findViewById(R.id.caption_text))
                 .setText("Preparing the recognizer");
 
-        // Check if user has given permission to record audio
-        int permissionCheck = ContextCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.RECORD_AUDIO);
-        if (permissionCheck != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.RECORD_AUDIO}, PERMISSIONS_REQUEST_RECORD_AUDIO);
-            return;
-        }
-        // Recognizer initialization is a time-consuming and it involves IO,
-        // so we execute it in async task
-        new SetupTask(this).execute();
+
 
         button = (Button) findViewById(R.id.button1);
         linearLayout = (LinearLayout) findViewById(R.id.linearLayout1);
 
+
+
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String color1 = "#FF033E";
-                String color2 = "#FFFFFF";
-                String color3 = "#000000";
+
 
                 EditText editText = (EditText)findViewById(R.id.editText1);
                 String phrase = editText.getText().toString();
@@ -144,6 +142,16 @@ public class PocketSphinxActivity extends Activity implements
 
             }
         });
+
+        // Check if user has given permission to record audio
+        int permissionCheck = ContextCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.RECORD_AUDIO);
+        if (permissionCheck != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.RECORD_AUDIO}, PERMISSIONS_REQUEST_RECORD_AUDIO);
+            return;
+        }
+        // Recognizer initialization is a time-consuming and it involves IO,
+        // so we execute it in async task
+        new SetupTask(this).execute();
     }
 
     private static class SetupTask extends AsyncTask<Void, Void, Exception> {
@@ -210,6 +218,22 @@ public class PocketSphinxActivity extends Activity implements
             return;
 
         String text = hypothesis.getHypstr();
+        addPhrase(color1, color2, text, true);
+
+
+
+
+        String answer = getAnswer(text);
+        if (answer.equals(""))
+            answer = "Извини, я тебя не понимаю. Попробуй еще раз!";
+
+
+
+
+
+
+        addPhrase(color2, color3, answer, false);
+
         if (text.equals(KEYPHRASE))
             switchSearch(RU_SEARCH);
         else if (text.equals(DIGITS_SEARCH))
@@ -316,6 +340,7 @@ public class PocketSphinxActivity extends Activity implements
                         LinearLayout.LayoutParams.MATCH_PARENT,
                         LinearLayout.LayoutParams.WRAP_CONTENT)
         );
+        Log.i("who", ">"+who);
         b.setId(USERID + countID);
         linearLayout.addView(b);
         LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) b.getLayoutParams();
@@ -324,7 +349,9 @@ public class PocketSphinxActivity extends Activity implements
         params.rightMargin += 10;
         b.setTextColor(Color.parseColor(colorText));
         b.setTextSize(22);
-        b.setTextAlignment(who ? View.TEXT_ALIGNMENT_TEXT_END : View.TEXT_ALIGNMENT_TEXT_START);
+        //b.setTextAlignment(who ? View.TEXT_ALIGNMENT_TEXT_END : View.TEXT_ALIGNMENT_TEXT_START);
+        b.setGravity(who ? Gravity.RIGHT : Gravity.LEFT);
+
         countID++;
     }
 

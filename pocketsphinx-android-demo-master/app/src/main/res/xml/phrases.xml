@@ -4,21 +4,75 @@
         <human_phrase>Привет</human_phrase>
         <human_phrase>привет</human_phrase>
         <human_phrase>Здравствуй</human_phrase>
+        <human_phrase>здравствуй</human_phrase>
         <bot_answer> Привет </bot_answer>
     </phrase>
     <phrase>
         <human_phrase>Как тебя зовут?</human_phrase>
         <human_phrase>У тебя есть имя?</human_phrase>
+        <human_phrase>как тебя зовут</human_phrase>
+        <human_phrase>у тебя есть имя</human_phrase>
         <bot_answer> Меня зовут Чешир </bot_answer>
     </phrase>
     <phrase>
         <human_phrase>Ты кто?</human_phrase>
         <human_phrase>Кто ты такой?</human_phrase>
+        <human_phrase>ты кто</human_phrase>
+        <human_phrase>кто ты такой</human_phrase>
         <bot_answer> Я прототип бота </bot_answer>
     </phrase>
     <phrase>
         <human_phrase>Расскажи анекдот</human_phrase>
         <human_phrase>Пошути</human_phrase>
+        <human_phrase>расскажи анекдот</human_phrase>
+        <human_phrase>пошути</human_phrase>
         <bot_answer> Моя жена спросила меня, почему я так тихо разговариваю в доме. Я сказал, что боюсь, что Марк Цукерберг слушает. В ответ она засмеялась. И я тоже засмеялся. И Алекса засмеялась. И Сири засмеялась. </bot_answer>
+    </phrase>
+    <phrase>
+        <human_phrase>мяу</human_phrase>
+        <human_phrase>Мяу</human_phrase>
+        <bot_answer> Мур </bot_answer>
+    </phrase>
+    <phrase>
+        <human_phrase>Как же хочется спать</human_phrase>
+        <human_phrase>как же хочется спать</human_phrase>
+        <bot_answer> Так закрывай глазки и засыпай. А потом проснёшься и закончишь все дела. </bot_answer>
+    </phrase>
+    <phrase>
+        <human_phrase>Ты очень милый</human_phrase>
+        <human_phrase>ты очень милый</human_phrase>
+        <bot_answer> Спасибо! Это взаимно! </bot_answer>
+    </phrase>
+    <phrase>
+        <human_phrase>Сколько тебе лет?</human_phrase>
+        <human_phrase>сколько тебе лет</human_phrase>
+        <bot_answer> Я совсем молод, мне нет еще и года </bot_answer>
+    </phrase>
+    <phrase>
+        <human_phrase>Ты плохой</human_phrase>
+        <human_phrase>ты плохой</human_phrase>
+        <bot_answer> Зачем оскорбляешь? Я хороший! </bot_answer>
+    </phrase>
+    <phrase>
+        <human_phrase>Ты занят?</human_phrase>
+        <human_phrase>ты занят</human_phrase>
+        <bot_answer> Конечно, я с тобой разговариваю </bot_answer>
+    </phrase>
+    <phrase>
+        <human_phrase>Стань умнее</human_phrase>
+        <human_phrase>стань умнее</human_phrase>
+        <human_phrase>Поумней</human_phrase>
+        <human_phrase>поумней</human_phrase>
+        <bot_answer> Я учусь </bot_answer>
+    </phrase>
+    <phrase>
+        <human_phrase>Ты странный</human_phrase>
+        <human_phrase>ты странный</human_phrase>
+        <bot_answer> У всех свои странности. Если у тебя нет странностей - ты странный. </bot_answer>
+    </phrase>
+    <phrase>
+        <human_phrase>Ты смешной</human_phrase>
+        <human_phrase>ты смешной</human_phrase>
+        <bot_answer> Ура! Я стараюсь! </bot_answer>
     </phrase>
 </root>
